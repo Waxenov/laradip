@@ -1,7 +1,7 @@
 c:\users\waxxe\repos\laradip\ospanel\modules\database\MySQL-8.0-Win10\bin\mysqld.exe, Version: 8.0.30 (MySQL Community Server - GPL). started with:
 TCP Port: 3306, Named Pipe: MySQL
 Time                 Id Command    Argument
-2024-02-16T12:01:54.850568Z	    0 Execute	CREATE TABLE performance_schema.innodb_redo_log_files(
+2024-02-16T15:14:30.024302Z	    0 Execute	CREATE TABLE performance_schema.innodb_redo_log_files(
 `FILE_ID` BIGINT NOT NULL COMMENT 'Id of the file.',
 `FILE_NAME` VARCHAR(2000) NOT NULL COMMENT 'Path to the file.',
 `START_LSN` BIGINT NOT NULL COMMENT 'LSN of the first block in the file.',
@@ -10,468 +10,43 @@ Time                 Id Command    Argument
 `IS_FULL` TINYINT NOT NULL COMMENT '1 iff file has no free space inside.',
 `CONSUMER_LEVEL` INT NOT NULL COMMENT 'All redo log consumers registered on smaller levels than this value, have already consumed this file.'
 )engine = 'performance_schema'
-2024-02-16T12:01:58.901210Z	    8 Connect	root@localhost on laravel using TCP/IP
-2024-02-16T12:01:58.901918Z	    8 Query	use `laravel`
-2024-02-16T12:01:58.902301Z	    8 Prepare	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:01:58.902416Z	    8 Execute	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:01:58.902595Z	    8 Close stmt	
-2024-02-16T12:01:58.902716Z	    8 Prepare	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:01:58.902796Z	    8 Execute	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:01:58.902971Z	    8 Close stmt	
-2024-02-16T12:01:59.226006Z	    8 Quit	
-2024-02-16T12:03:10.827968Z	    9 Connect	root@localhost on laravel using TCP/IP
-2024-02-16T12:03:10.828290Z	    9 Query	use `laravel`
-2024-02-16T12:03:10.828606Z	    9 Prepare	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:03:10.828709Z	    9 Execute	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:03:10.828850Z	    9 Close stmt	
-2024-02-16T12:03:10.828938Z	    9 Prepare	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:03:10.828997Z	    9 Execute	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:03:10.829134Z	    9 Close stmt	
-2024-02-16T12:03:10.838753Z	    9 Prepare	select table_name as `name`, (data_length + index_length) as `size`, table_comment as `comment`, engine as `engine`, table_collation as `collation` from information_schema.tables where table_schema = 'laravel' and table_type in ('BASE TABLE', 'SYSTEM VERSIONED') order by table_name
-2024-02-16T12:03:10.839347Z	    9 Execute	select table_name as `name`, (data_length + index_length) as `size`, table_comment as `comment`, engine as `engine`, table_collation as `collation` from information_schema.tables where table_schema = 'laravel' and table_type in ('BASE TABLE', 'SYSTEM VERSIONED') order by table_name
-2024-02-16T12:03:10.843906Z	    9 Close stmt	
-2024-02-16T12:03:10.845794Z	    9 Prepare	select table_name as `name`, (data_length + index_length) as `size`, table_comment as `comment`, engine as `engine`, table_collation as `collation` from information_schema.tables where table_schema = 'laravel' and table_type in ('BASE TABLE', 'SYSTEM VERSIONED') order by table_name
-2024-02-16T12:03:10.845941Z	    9 Execute	select table_name as `name`, (data_length + index_length) as `size`, table_comment as `comment`, engine as `engine`, table_collation as `collation` from information_schema.tables where table_schema = 'laravel' and table_type in ('BASE TABLE', 'SYSTEM VERSIONED') order by table_name
-2024-02-16T12:03:10.846799Z	    9 Close stmt	
-2024-02-16T12:03:10.856486Z	    9 Prepare	select `migration` from `migrations` order by `batch` asc, `migration` asc
-2024-02-16T12:03:10.856613Z	    9 Execute	select `migration` from `migrations` order by `batch` asc, `migration` asc
-2024-02-16T12:03:10.858436Z	    9 Close stmt	
-2024-02-16T12:03:10.860060Z	    9 Prepare	select `migration` from `migrations` order by `batch` asc, `migration` asc
-2024-02-16T12:03:10.860146Z	    9 Execute	select `migration` from `migrations` order by `batch` asc, `migration` asc
-2024-02-16T12:03:10.860468Z	    9 Close stmt	
-2024-02-16T12:03:10.862637Z	    9 Prepare	select max(`batch`) as aggregate from `migrations`
-2024-02-16T12:03:10.862715Z	    9 Execute	select max(`batch`) as aggregate from `migrations`
-2024-02-16T12:03:10.863194Z	    9 Close stmt	
-2024-02-16T12:03:10.880963Z	    9 Prepare	alter table `users` add `two_factor_secret` text null after `password`, add `two_factor_recovery_codes` text null after `two_factor_secret`, add `two_factor_confirmed_at` timestamp null after `two_factor_recovery_codes`
-2024-02-16T12:03:10.881025Z	    9 Execute	alter table `users` add `two_factor_secret` text null after `password`, add `two_factor_recovery_codes` text null after `two_factor_secret`, add `two_factor_confirmed_at` timestamp null after `two_factor_recovery_codes`
-2024-02-16T12:03:10.897452Z	    9 Close stmt	
-2024-02-16T12:03:10.907733Z	    9 Prepare	insert into `migrations` (`migration`, `batch`) values (?, ?)
-2024-02-16T12:03:10.908081Z	    9 Execute	insert into `migrations` (`migration`, `batch`) values ('2014_10_12_200000_add_two_factor_columns_to_users_table', 2)
-2024-02-16T12:03:10.908414Z	    9 Close stmt	
-2024-02-16T12:03:10.910884Z	    9 Prepare	create table `sessions` (`id` varchar(255) not null, `user_id` bigint unsigned null, `ip_address` varchar(45) null, `user_agent` text null, `payload` longtext not null, `last_activity` int not null, primary key (`id`)) default character set utf8mb4 collate 'utf8mb4_unicode_ci'
-2024-02-16T12:03:10.910955Z	    9 Execute	create table `sessions` (`id` varchar(255) not null, `user_id` bigint unsigned null, `ip_address` varchar(45) null, `user_agent` text null, `payload` longtext not null, `last_activity` int not null, primary key (`id`)) default character set utf8mb4 collate 'utf8mb4_unicode_ci'
-2024-02-16T12:03:10.922416Z	    9 Close stmt	
-2024-02-16T12:03:10.922612Z	    9 Prepare	alter table `sessions` add index `sessions_user_id_index`(`user_id`)
-2024-02-16T12:03:10.922673Z	    9 Execute	alter table `sessions` add index `sessions_user_id_index`(`user_id`)
-2024-02-16T12:03:10.939345Z	    9 Close stmt	
-2024-02-16T12:03:10.939568Z	    9 Prepare	alter table `sessions` add index `sessions_last_activity_index`(`last_activity`)
-2024-02-16T12:03:10.939633Z	    9 Execute	alter table `sessions` add index `sessions_last_activity_index`(`last_activity`)
-2024-02-16T12:03:10.948702Z	    9 Close stmt	
-2024-02-16T12:03:10.960328Z	    9 Prepare	insert into `migrations` (`migration`, `batch`) values (?, ?)
-2024-02-16T12:03:10.960414Z	    9 Execute	insert into `migrations` (`migration`, `batch`) values ('2024_02_16_114320_create_sessions_table', 2)
-2024-02-16T12:03:10.960791Z	    9 Close stmt	
-2024-02-16T12:03:10.963521Z	    9 Quit	
-2024-02-16T12:03:18.041189Z	   10 Connect	root@localhost on laravel using TCP/IP
-2024-02-16T12:03:18.041611Z	   10 Query	use `laravel`
-2024-02-16T12:03:18.042013Z	   10 Prepare	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:03:18.042126Z	   10 Execute	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:03:18.042351Z	   10 Close stmt	
-2024-02-16T12:03:18.042572Z	   10 Prepare	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:03:18.042630Z	   10 Execute	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:03:18.042843Z	   10 Close stmt	
-2024-02-16T12:03:18.043329Z	   10 Prepare	select * from `sessions` where `id` = ? limit 1
-2024-02-16T12:03:18.043869Z	   10 Execute	select * from `sessions` where `id` = 'XisxsHfzcbixDKdGmZGi5LHvFnSmTSdsJPN2eyBI' limit 1
-2024-02-16T12:03:18.044128Z	   10 Close stmt	
-2024-02-16T12:03:18.112432Z	   10 Prepare	select * from `sessions` where `id` = ? limit 1
-2024-02-16T12:03:18.112715Z	   10 Execute	select * from `sessions` where `id` = 'XisxsHfzcbixDKdGmZGi5LHvFnSmTSdsJPN2eyBI' limit 1
-2024-02-16T12:03:18.113166Z	   10 Close stmt	
-2024-02-16T12:03:18.113830Z	   10 Prepare	insert into `sessions` (`payload`, `last_activity`, `user_id`, `ip_address`, `user_agent`, `id`) values (?, ?, ?, ?, ?, ?)
-2024-02-16T12:03:18.113994Z	   10 Execute	insert into `sessions` (`payload`, `last_activity`, `user_id`, `ip_address`, `user_agent`, `id`) values ('YTozOntzOjY6Il90b2tlbiI7czo0MDoiV3Ntbk0zMWc2ZHVrYkJ4VUhzekZSWHNsMnVORXN0ZDJUTXdCemxjbiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTQ6Imh0dHA6Ly9sYXJhdmVsIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1708084998, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36', 'XisxsHfzcbixDKdGmZGi5LHvFnSmTSdsJPN2eyBI')
-2024-02-16T12:03:18.133333Z	   10 Close stmt	
-2024-02-16T12:03:18.136262Z	   10 Quit	
-2024-02-16T12:03:25.243821Z	   11 Connect	root@localhost on laravel using TCP/IP
-2024-02-16T12:03:25.244172Z	   11 Query	use `laravel`
-2024-02-16T12:03:25.244518Z	   11 Prepare	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:03:25.244578Z	   11 Execute	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:03:25.244733Z	   11 Close stmt	
-2024-02-16T12:03:25.244947Z	   11 Prepare	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:03:25.244997Z	   11 Execute	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:03:25.245152Z	   11 Close stmt	
-2024-02-16T12:03:25.245521Z	   11 Prepare	select * from `sessions` where `id` = ? limit 1
-2024-02-16T12:03:25.246087Z	   11 Execute	select * from `sessions` where `id` = 'XisxsHfzcbixDKdGmZGi5LHvFnSmTSdsJPN2eyBI' limit 1
-2024-02-16T12:03:25.246620Z	   11 Close stmt	
-2024-02-16T12:03:26.609109Z	   11 Prepare	update `sessions` set `payload` = ?, `last_activity` = ?, `user_id` = ?, `ip_address` = ?, `user_agent` = ? where `id` = ?
-2024-02-16T12:03:26.609218Z	   11 Execute	update `sessions` set `payload` = 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiV3Ntbk0zMWc2ZHVrYkJ4VUhzekZSWHNsMnVORXN0ZDJUTXdCemxjbiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjA6Imh0dHA6Ly9sYXJhdmVsL2xvZ2luIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', `last_activity` = 1708085006, `user_id` = NULL, `ip_address` = '127.0.0.1', `user_agent` = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36' where `id` = 'XisxsHfzcbixDKdGmZGi5LHvFnSmTSdsJPN2eyBI'
-2024-02-16T12:03:26.610845Z	   11 Close stmt	
-2024-02-16T12:03:26.613165Z	   11 Quit	
-2024-02-16T12:03:35.419870Z	   12 Connect	root@localhost on laravel using TCP/IP
-2024-02-16T12:03:35.420124Z	   12 Query	use `laravel`
-2024-02-16T12:03:35.420370Z	   12 Prepare	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:03:35.420411Z	   12 Execute	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:03:35.420537Z	   12 Close stmt	
-2024-02-16T12:03:35.420646Z	   12 Prepare	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:03:35.420679Z	   12 Execute	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:03:35.420808Z	   12 Close stmt	
-2024-02-16T12:03:35.421119Z	   12 Prepare	select * from `sessions` where `id` = ? limit 1
-2024-02-16T12:03:35.422015Z	   12 Execute	select * from `sessions` where `id` = 'XisxsHfzcbixDKdGmZGi5LHvFnSmTSdsJPN2eyBI' limit 1
-2024-02-16T12:03:35.422422Z	   12 Close stmt	
-2024-02-16T12:03:36.151162Z	   12 Prepare	update `sessions` set `payload` = ?, `last_activity` = ?, `user_id` = ?, `ip_address` = ?, `user_agent` = ? where `id` = ?
-2024-02-16T12:03:36.151252Z	   12 Execute	update `sessions` set `payload` = 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiV3Ntbk0zMWc2ZHVrYkJ4VUhzekZSWHNsMnVORXN0ZDJUTXdCemxjbiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzA6Imh0dHA6Ly9sYXJhdmVsL2ZvcmdvdC1wYXNzd29yZCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', `last_activity` = 1708085016, `user_id` = NULL, `ip_address` = '127.0.0.1', `user_agent` = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36' where `id` = 'XisxsHfzcbixDKdGmZGi5LHvFnSmTSdsJPN2eyBI'
-2024-02-16T12:03:36.170203Z	   12 Close stmt	
-2024-02-16T12:03:36.172686Z	   12 Quit	
-2024-02-16T12:03:41.410377Z	   13 Connect	root@localhost on laravel using TCP/IP
-2024-02-16T12:03:41.410793Z	   13 Query	use `laravel`
-2024-02-16T12:03:41.411219Z	   13 Prepare	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:03:41.411280Z	   13 Execute	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:03:41.411427Z	   13 Close stmt	
-2024-02-16T12:03:41.411557Z	   13 Prepare	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:03:41.411590Z	   13 Execute	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:03:41.411713Z	   13 Close stmt	
-2024-02-16T12:03:41.412045Z	   13 Prepare	select * from `sessions` where `id` = ? limit 1
-2024-02-16T12:03:41.412423Z	   13 Execute	select * from `sessions` where `id` = 'XisxsHfzcbixDKdGmZGi5LHvFnSmTSdsJPN2eyBI' limit 1
-2024-02-16T12:03:41.412704Z	   13 Close stmt	
-2024-02-16T12:03:42.907383Z	   13 Prepare	update `sessions` set `payload` = ?, `last_activity` = ?, `user_id` = ?, `ip_address` = ?, `user_agent` = ? where `id` = ?
-2024-02-16T12:03:42.907503Z	   13 Execute	update `sessions` set `payload` = 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiV3Ntbk0zMWc2ZHVrYkJ4VUhzekZSWHNsMnVORXN0ZDJUTXdCemxjbiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjM6Imh0dHA6Ly9sYXJhdmVsL3JlZ2lzdGVyIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', `last_activity` = 1708085022, `user_id` = NULL, `ip_address` = '127.0.0.1', `user_agent` = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36' where `id` = 'XisxsHfzcbixDKdGmZGi5LHvFnSmTSdsJPN2eyBI'
-2024-02-16T12:03:42.926821Z	   13 Close stmt	
-2024-02-16T12:03:42.928975Z	   13 Quit	
-2024-02-16T12:04:13.441658Z	   14 Connect	root@localhost on laravel using TCP/IP
-2024-02-16T12:04:13.441992Z	   14 Query	use `laravel`
-2024-02-16T12:04:13.442284Z	   14 Prepare	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:04:13.442328Z	   14 Execute	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:04:13.442457Z	   14 Close stmt	
-2024-02-16T12:04:13.442621Z	   14 Prepare	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:04:13.442671Z	   14 Execute	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:04:13.442808Z	   14 Close stmt	
-2024-02-16T12:04:13.443311Z	   14 Prepare	select * from `sessions` where `id` = ? limit 1
-2024-02-16T12:04:13.444062Z	   14 Execute	select * from `sessions` where `id` = 'XisxsHfzcbixDKdGmZGi5LHvFnSmTSdsJPN2eyBI' limit 1
-2024-02-16T12:04:13.444492Z	   14 Close stmt	
-2024-02-16T12:04:13.475941Z	   14 Prepare	select count(*) as aggregate from `users` where `email` = ?
-2024-02-16T12:04:13.476066Z	   14 Execute	select count(*) as aggregate from `users` where `email` = 'waxenov@mail.ru'
-2024-02-16T12:04:13.476379Z	   14 Close stmt	
-2024-02-16T12:04:13.860130Z	   14 Prepare	insert into `users` (`name`, `email`, `password`, `updated_at`, `created_at`) values (?, ?, ?, ?, ?)
-2024-02-16T12:04:13.860300Z	   14 Execute	insert into `users` (`name`, `email`, `password`, `updated_at`, `created_at`) values ('Жамилев Эльдар Русланович', 'waxenov@mail.ru', '$2y$12$Imz9bJf6wo.u9omRI1KgfOpMipRYOmM9AvRbEPNvX/ZMpDxm9gd1m', '2024-02-16 12:04:13', '2024-02-16 12:04:13')
-2024-02-16T12:04:13.879609Z	   14 Close stmt	
-2024-02-16T12:04:13.881488Z	   14 Prepare	delete from `sessions` where `id` = ?
-2024-02-16T12:04:13.881550Z	   14 Execute	delete from `sessions` where `id` = 'XisxsHfzcbixDKdGmZGi5LHvFnSmTSdsJPN2eyBI'
-2024-02-16T12:04:13.882115Z	   14 Close stmt	
-2024-02-16T12:04:13.887502Z	   14 Prepare	select * from `sessions` where `id` = ? limit 1
-2024-02-16T12:04:13.887605Z	   14 Execute	select * from `sessions` where `id` = '0tfq2nSq5V2a3o22R4pwBlyyWdUe6B90LCbbbcAC' limit 1
-2024-02-16T12:04:13.888014Z	   14 Close stmt	
-2024-02-16T12:04:13.888408Z	   14 Prepare	insert into `sessions` (`payload`, `last_activity`, `user_id`, `ip_address`, `user_agent`, `id`) values (?, ?, ?, ?, ?, ?)
-2024-02-16T12:04:13.888545Z	   14 Prepare	insert into `sessions` (`payload`, `last_activity`, `user_id`, `ip_address`, `user_agent`, `id`) values (?, ?, ?, ?, ?, ?)
-2024-02-16T12:04:13.888565Z	   14 Execute	insert into `sessions` (`payload`, `last_activity`, `user_id`, `ip_address`, `user_agent`, `id`) values ('YTo0OntzOjY6Il90b2tlbiI7czo0MDoiV3Ntbk0zMWc2ZHVrYkJ4VUhzekZSWHNsMnVORXN0ZDJUTXdCemxjbiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjM6Imh0dHA6Ly9sYXJhdmVsL3JlZ2lzdGVyIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6Mjt9', 1708085053, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36', '0tfq2nSq5V2a3o22R4pwBlyyWdUe6B90LCbbbcAC')
-2024-02-16T12:04:13.889076Z	   14 Close stmt	
-2024-02-16T12:04:13.891975Z	   14 Quit	
-2024-02-16T12:04:14.159075Z	   15 Connect	root@localhost on laravel using TCP/IP
-2024-02-16T12:04:14.159506Z	   15 Query	use `laravel`
-2024-02-16T12:04:14.160044Z	   15 Prepare	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:04:14.160093Z	   15 Execute	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:04:14.160228Z	   15 Close stmt	
-2024-02-16T12:04:14.160359Z	   15 Prepare	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:04:14.160392Z	   15 Execute	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:04:14.160515Z	   15 Close stmt	
-2024-02-16T12:04:14.160884Z	   15 Prepare	select * from `sessions` where `id` = ? limit 1
-2024-02-16T12:04:14.161327Z	   15 Execute	select * from `sessions` where `id` = '0tfq2nSq5V2a3o22R4pwBlyyWdUe6B90LCbbbcAC' limit 1
-2024-02-16T12:04:14.161723Z	   15 Close stmt	
-2024-02-16T12:04:14.181027Z	   15 Prepare	select * from `users` where `id` = ? limit 1
-2024-02-16T12:04:14.181205Z	   15 Prepare	select * from `users` where `id` = ? limit 1
-2024-02-16T12:04:14.181229Z	   15 Execute	select * from `users` where `id` = 2 limit 1
-2024-02-16T12:04:14.181476Z	   15 Close stmt	
-2024-02-16T12:04:16.867178Z	   15 Prepare	update `sessions` set `payload` = ?, `last_activity` = ?, `user_id` = ?, `ip_address` = ?, `user_agent` = ? where `id` = ?
-2024-02-16T12:04:16.867316Z	   15 Prepare	update `sessions` set `payload` = ?, `last_activity` = ?, `user_id` = ?, `ip_address` = ?, `user_agent` = ? where `id` = ?
-2024-02-16T12:04:16.867340Z	   15 Execute	update `sessions` set `payload` = 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiV3Ntbk0zMWc2ZHVrYkJ4VUhzekZSWHNsMnVORXN0ZDJUTXdCemxjbiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjQ6Imh0dHA6Ly9sYXJhdmVsL2Rhc2hib2FyZCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjI7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTIkSW16OWJKZjZ3by51OW9tUkkxS2dmT3BNaXBSWU9tTTlBdlJiRVBOdlgvWk1wRHhtOWdkMW0iO30=', `last_activity` = 1708085056, `user_id` = 2, `ip_address` = '127.0.0.1', `user_agent` = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36' where `id` = '0tfq2nSq5V2a3o22R4pwBlyyWdUe6B90LCbbbcAC'
-2024-02-16T12:04:16.868124Z	   15 Close stmt	
-2024-02-16T12:04:16.870343Z	   15 Quit	
-2024-02-16T12:04:29.148587Z	   16 Connect	root@localhost on laravel using TCP/IP
-2024-02-16T12:04:29.148897Z	   16 Query	use `laravel`
-2024-02-16T12:04:29.149192Z	   16 Prepare	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:04:29.149235Z	   16 Execute	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:04:29.149375Z	   16 Close stmt	
-2024-02-16T12:04:29.149513Z	   16 Prepare	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:04:29.149564Z	   16 Execute	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:04:29.149696Z	   16 Close stmt	
-2024-02-16T12:04:29.150149Z	   16 Prepare	select * from `sessions` where `id` = ? limit 1
-2024-02-16T12:04:29.150545Z	   16 Execute	select * from `sessions` where `id` = '0tfq2nSq5V2a3o22R4pwBlyyWdUe6B90LCbbbcAC' limit 1
-2024-02-16T12:04:29.150850Z	   16 Close stmt	
-2024-02-16T12:04:29.178439Z	   16 Prepare	select * from `users` where `id` = ? limit 1
-2024-02-16T12:04:29.178749Z	   16 Prepare	select * from `users` where `id` = ? limit 1
-2024-02-16T12:04:29.178786Z	   16 Execute	select * from `users` where `id` = 2 limit 1
-2024-02-16T12:04:29.179206Z	   16 Close stmt	
-2024-02-16T12:04:36.340091Z	   16 Prepare	select * from `sessions` where `user_id` = ? order by `last_activity` desc
-2024-02-16T12:04:36.340253Z	   16 Prepare	select * from `sessions` where `user_id` = ? order by `last_activity` desc
-2024-02-16T12:04:36.340277Z	   16 Execute	select * from `sessions` where `user_id` = 2 order by `last_activity` desc
-2024-02-16T12:04:36.340637Z	   16 Close stmt	
-2024-02-16T12:04:37.177318Z	   16 Prepare	update `sessions` set `payload` = ?, `last_activity` = ?, `user_id` = ?, `ip_address` = ?, `user_agent` = ? where `id` = ?
-2024-02-16T12:04:37.177517Z	   16 Prepare	update `sessions` set `payload` = ?, `last_activity` = ?, `user_id` = ?, `ip_address` = ?, `user_agent` = ? where `id` = ?
-2024-02-16T12:04:37.177540Z	   16 Execute	update `sessions` set `payload` = 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiV3Ntbk0zMWc2ZHVrYkJ4VUhzekZSWHNsMnVORXN0ZDJUTXdCemxjbiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjc6Imh0dHA6Ly9sYXJhdmVsL3VzZXIvcHJvZmlsZSI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjI7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTIkSW16OWJKZjZ3by51OW9tUkkxS2dmT3BNaXBSWU9tTTlBdlJiRVBOdlgvWk1wRHhtOWdkMW0iO30=', `last_activity` = 1708085077, `user_id` = 2, `ip_address` = '127.0.0.1', `user_agent` = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36' where `id` = '0tfq2nSq5V2a3o22R4pwBlyyWdUe6B90LCbbbcAC'
-2024-02-16T12:04:37.196955Z	   16 Close stmt	
-2024-02-16T12:04:37.200304Z	   16 Quit	
-2024-02-16T12:08:02.480306Z	   17 Connect	root@localhost on  using TCP/IP
-2024-02-16T12:08:02.480675Z	   17 Query	SELECT @@version, @@version_comment
-2024-02-16T12:08:02.486658Z	   17 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_general_ci'
-2024-02-16T12:08:02.487091Z	   17 Query	SET lc_messages = 'ru_RU'
-2024-02-16T12:08:02.496371Z	   18 Connect	root@localhost on  using TCP/IP
-2024-02-16T12:08:02.507427Z	   18 Quit	
-2024-02-16T12:08:02.507451Z	   17 Quit	
-2024-02-16T12:08:02.603308Z	   19 Connect	root@localhost on  using TCP/IP
-2024-02-16T12:08:02.603609Z	   19 Query	SELECT @@version, @@version_comment
-2024-02-16T12:08:02.606458Z	   19 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_general_ci'
-2024-02-16T12:08:02.606752Z	   19 Query	SET lc_messages = 'ru_RU'
-2024-02-16T12:08:02.633055Z	   20 Connect	root@localhost on  using TCP/IP
-2024-02-16T12:08:02.639535Z	   20 Query	SHOW TABLES FROM `phpmyadmin`
-2024-02-16T12:08:02.667236Z	   19 Query	SET collation_connection = 'utf8mb4_unicode_ci'
-2024-02-16T12:08:02.667564Z	   20 Query	SHOW TABLES FROM `phpmyadmin`
-2024-02-16T12:08:02.675691Z	   19 Query	SELECT 1 FROM mysql.user LIMIT 1
-2024-02-16T12:08:02.676365Z	   19 Init DB	mysql
-2024-02-16T12:08:02.678950Z	   19 Query	SELECT CURRENT_USER()
-2024-02-16T12:08:02.679462Z	   19 Query	SHOW GRANTS
-2024-02-16T12:08:02.681050Z	   19 Query	SELECT `CHARACTER_SET_NAME` AS `Charset`, `DEFAULT_COLLATE_NAME` AS `Default collation`, `DESCRIPTION` AS `Description`, `MAXLEN` AS `Maxlen` FROM `information_schema`.`CHARACTER_SETS`
-2024-02-16T12:08:02.701536Z	   19 Query	SELECT `COLLATION_NAME` AS `Collation`, `CHARACTER_SET_NAME` AS `Charset`, `ID` AS `Id`, `IS_DEFAULT` AS `Default`, `IS_COMPILED` AS `Compiled`, `SORTLEN` AS `Sortlen` FROM `information_schema`.`COLLATIONS`
-2024-02-16T12:08:02.710640Z	   19 Query	SHOW SESSION VARIABLES LIKE 'character_set_server'
-2024-02-16T12:08:02.717975Z	   19 Query	SELECT USER()
-2024-02-16T12:08:02.985630Z	   19 Query	SELECT `SCHEMA_NAME` FROM `INFORMATION_SCHEMA`.`SCHEMATA`, (SELECT DB_first_level FROM ( SELECT DISTINCT SUBSTRING_INDEX(SCHEMA_NAME, '_', 1) DB_first_level FROM INFORMATION_SCHEMA.SCHEMATA WHERE TRUE ) t ORDER BY DB_first_level ASC LIMIT 0, 100) t2 WHERE TRUE AND 1 = LOCATE(CONCAT(DB_first_level, '_'), CONCAT(SCHEMA_NAME, '_')) ORDER BY SCHEMA_NAME ASC
-2024-02-16T12:08:03.076535Z	   19 Query	SELECT COUNT(*) FROM ( SELECT DISTINCT SUBSTRING_INDEX(SCHEMA_NAME, '_', 1) DB_first_level FROM INFORMATION_SCHEMA.SCHEMATA WHERE TRUE ) t
-2024-02-16T12:08:03.127230Z	   19 Query	SELECT COUNT(*) FROM ( SELECT DISTINCT SUBSTRING_INDEX(SCHEMA_NAME, '_', 1) DB_first_level FROM INFORMATION_SCHEMA.SCHEMATA WHERE TRUE ) t
-2024-02-16T12:08:03.267557Z	   19 Query	SELECT 1 FROM (SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`COLUMN_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`TABLE_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`SCHEMA_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`USER_PRIVILEGES`) t WHERE `IS_GRANTABLE` = 'YES' AND '''root''@''%''' LIKE `GRANTEE` LIMIT 1
-2024-02-16T12:08:03.269120Z	   19 Query	SHOW MASTER LOGS
-2024-02-16T12:08:03.371294Z	   20 Quit	
-2024-02-16T12:08:03.371484Z	   19 Quit	
-2024-02-16T12:08:03.739393Z	   21 Connect	root@localhost on  using TCP/IP
-2024-02-16T12:08:03.739836Z	   21 Query	SELECT @@version, @@version_comment
-2024-02-16T12:08:03.742518Z	   21 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_general_ci'
-2024-02-16T12:08:03.742761Z	   21 Query	SET lc_messages = 'ru_RU'
-2024-02-16T12:08:03.771166Z	   22 Connect	root@localhost on  using TCP/IP
-2024-02-16T12:08:03.775173Z	   22 Query	SHOW TABLES FROM `phpmyadmin`
-2024-02-16T12:08:03.786650Z	   21 Query	SET collation_connection = 'utf8mb4_unicode_ci'
-2024-02-16T12:08:03.787687Z	   22 Query	SHOW TABLES FROM `phpmyadmin`
-2024-02-16T12:08:03.834017Z	   21 Query	SELECT 1 FROM mysql.user LIMIT 1
-2024-02-16T12:08:03.834909Z	   21 Query	SELECT CURRENT_USER()
-2024-02-16T12:08:03.836509Z	   21 Query	SELECT 1 FROM (SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`COLUMN_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`TABLE_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`SCHEMA_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`USER_PRIVILEGES`) t WHERE `IS_GRANTABLE` = 'YES' AND '''root''@''%''' LIKE `GRANTEE` LIMIT 1
-2024-02-16T12:08:03.840680Z	   22 Quit	
-2024-02-16T12:08:03.840774Z	   21 Quit	
-2024-02-16T12:08:03.911222Z	   23 Connect	root@localhost on  using TCP/IP
-2024-02-16T12:08:03.911547Z	   23 Query	SELECT @@version, @@version_comment
-2024-02-16T12:08:03.914467Z	   23 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_general_ci'
-2024-02-16T12:08:03.914761Z	   23 Query	SET lc_messages = 'ru_RU'
-2024-02-16T12:08:03.941648Z	   24 Connect	root@localhost on  using TCP/IP
-2024-02-16T12:08:03.945514Z	   24 Query	SHOW TABLES FROM `phpmyadmin`
-2024-02-16T12:08:03.956669Z	   23 Query	SET collation_connection = 'utf8mb4_unicode_ci'
-2024-02-16T12:08:03.957506Z	   24 Query	SHOW TABLES FROM `phpmyadmin`
-2024-02-16T12:08:03.964143Z	   23 Query	SELECT CURRENT_USER()
-2024-02-16T12:08:03.993593Z	   23 Query	SELECT `SCHEMA_NAME` FROM `INFORMATION_SCHEMA`.`SCHEMATA`, (SELECT DB_first_level FROM ( SELECT DISTINCT SUBSTRING_INDEX(SCHEMA_NAME, '_', 1) DB_first_level FROM INFORMATION_SCHEMA.SCHEMATA WHERE TRUE ) t ORDER BY DB_first_level ASC LIMIT 0, 100) t2 WHERE TRUE AND 1 = LOCATE(CONCAT(DB_first_level, '_'), CONCAT(SCHEMA_NAME, '_')) ORDER BY SCHEMA_NAME ASC
-2024-02-16T12:08:04.004387Z	   23 Query	SELECT COUNT(*) FROM ( SELECT DISTINCT SUBSTRING_INDEX(SCHEMA_NAME, '_', 1) DB_first_level FROM INFORMATION_SCHEMA.SCHEMATA WHERE TRUE ) t
-2024-02-16T12:08:04.009536Z	   23 Query	SELECT COUNT(*) FROM ( SELECT DISTINCT SUBSTRING_INDEX(SCHEMA_NAME, '_', 1) DB_first_level FROM INFORMATION_SCHEMA.SCHEMATA WHERE TRUE ) t
-2024-02-16T12:08:04.017494Z	   23 Query	SELECT 1 FROM mysql.user LIMIT 1
-2024-02-16T12:08:04.019838Z	   23 Query	SELECT 1 FROM (SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`COLUMN_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`TABLE_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`SCHEMA_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`USER_PRIVILEGES`) t WHERE `IS_GRANTABLE` = 'YES' AND '''root''@''%''' LIKE `GRANTEE` LIMIT 1
-2024-02-16T12:08:04.023837Z	   24 Quit	
-2024-02-16T12:08:04.024152Z	   23 Quit	
-2024-02-16T12:08:04.115355Z	   25 Connect	root@localhost on  using TCP/IP
-2024-02-16T12:08:04.115633Z	   25 Query	SELECT @@version, @@version_comment
-2024-02-16T12:08:04.119965Z	   25 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_general_ci'
-2024-02-16T12:08:04.120240Z	   25 Query	SET lc_messages = 'ru_RU'
-2024-02-16T12:08:04.145994Z	   26 Connect	root@localhost on  using TCP/IP
-2024-02-16T12:08:04.149550Z	   26 Query	SHOW TABLES FROM `phpmyadmin`
-2024-02-16T12:08:04.163424Z	   25 Query	SET collation_connection = 'utf8mb4_unicode_ci'
-2024-02-16T12:08:04.163850Z	   26 Query	SHOW TABLES FROM `phpmyadmin`
-2024-02-16T12:08:04.176036Z	   25 Query	SELECT 1 FROM mysql.user LIMIT 1
-2024-02-16T12:08:04.177117Z	   25 Query	SELECT CURRENT_USER()
-2024-02-16T12:08:04.178719Z	   25 Query	SELECT 1 FROM (SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`COLUMN_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`TABLE_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`SCHEMA_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`USER_PRIVILEGES`) t WHERE `IS_GRANTABLE` = 'YES' AND '''root''@''%''' LIKE `GRANTEE` LIMIT 1
-2024-02-16T12:08:04.182532Z	   26 Quit	
-2024-02-16T12:08:04.182630Z	   25 Quit	
-2024-02-16T12:08:04.332366Z	   27 Connect	root@localhost on  using TCP/IP
-2024-02-16T12:08:04.332753Z	   27 Query	SELECT @@version, @@version_comment
-2024-02-16T12:08:04.337410Z	   27 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_general_ci'
-2024-02-16T12:08:04.337637Z	   27 Query	SET lc_messages = 'ru_RU'
-2024-02-16T12:08:04.341298Z	   28 Connect	root@localhost on  using TCP/IP
-2024-02-16T12:08:04.344828Z	   28 Query	SHOW TABLES FROM `phpmyadmin`
-2024-02-16T12:08:04.358153Z	   27 Query	SET collation_connection = 'utf8mb4_unicode_ci'
-2024-02-16T12:08:04.358722Z	   28 Query	SHOW TABLES FROM `phpmyadmin`
-2024-02-16T12:08:04.411375Z	   27 Query	SELECT 1 FROM mysql.user LIMIT 1
-2024-02-16T12:08:04.411984Z	   27 Query	SELECT CURRENT_USER()
-2024-02-16T12:08:04.413188Z	   27 Query	SELECT 1 FROM (SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`COLUMN_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`TABLE_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`SCHEMA_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`USER_PRIVILEGES`) t WHERE `IS_GRANTABLE` = 'YES' AND '''root''@''%''' LIKE `GRANTEE` LIMIT 1
-2024-02-16T12:08:04.416803Z	   28 Quit	
-2024-02-16T12:08:04.416902Z	   27 Quit	
-2024-02-16T12:08:05.171429Z	   29 Connect	root@localhost on  using TCP/IP
-2024-02-16T12:08:05.172060Z	   29 Query	SELECT @@version, @@version_comment
-2024-02-16T12:08:05.175627Z	   29 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_general_ci'
-2024-02-16T12:08:05.175933Z	   29 Query	SET lc_messages = 'ru_RU'
-2024-02-16T12:08:05.179938Z	   30 Connect	root@localhost on  using TCP/IP
-2024-02-16T12:08:05.183093Z	   30 Query	SHOW TABLES FROM `phpmyadmin`
-2024-02-16T12:08:05.183770Z	   30 Query	SHOW TABLES FROM `laravel`
-2024-02-16T12:08:05.198713Z	   29 Query	SET collation_connection = 'utf8mb4_unicode_ci'
-2024-02-16T12:08:05.199220Z	   30 Query	SHOW TABLES FROM `phpmyadmin`
-2024-02-16T12:08:05.199791Z	   30 Query	SHOW TABLES FROM `laravel`
-2024-02-16T12:08:05.214660Z	   29 Init DB	laravel
-2024-02-16T12:08:05.214963Z	   29 Query	SHOW TABLES FROM `laravel`
-2024-02-16T12:08:05.218168Z	   29 Query	SELECT @@lower_case_table_names
-2024-02-16T12:08:05.218678Z	   29 Query	SELECT *, `TABLE_SCHEMA`       AS `Db`, `TABLE_NAME`         AS `Name`, `TABLE_TYPE`         AS `TABLE_TYPE`, `ENGINE`             AS `Engine`, `ENGINE`             AS `Type`, `VERSION`            AS `Version`, `ROW_FORMAT`         AS `Row_format`, `TABLE_ROWS`         AS `Rows`, `AVG_ROW_LENGTH`     AS `Avg_row_length`, `DATA_LENGTH`        AS `Data_length`, `MAX_DATA_LENGTH`    AS `Max_data_length`, `INDEX_LENGTH`       AS `Index_length`, `DATA_FREE`          AS `Data_free`, `AUTO_INCREMENT`     AS `Auto_increment`, `CREATE_TIME`        AS `Create_time`, `UPDATE_TIME`        AS `Update_time`, `CHECK_TIME`         AS `Check_time`, `TABLE_COLLATION`    AS `Collation`, `CHECKSUM`           AS `Checksum`, `CREATE_OPTIONS`     AS `Create_options`, `TABLE_COMMENT`      AS `Comment` FROM `information_schema`.`TABLES` t WHERE `TABLE_SCHEMA` COLLATE utf8_general_ci IN ('laravel')  ORDER BY Name ASC LIMIT 250 OFFSET 0
-2024-02-16T12:08:05.222563Z	   29 Query	SHOW MASTER STATUS
-2024-02-16T12:08:05.222784Z	   29 Query	SHOW SLAVE STATUS
-2024-02-16T12:08:05.256457Z	   29 Query	SELECT COUNT(*) FROM `laravel`.`failed_jobs`
-2024-02-16T12:08:05.262893Z	   29 Query	SELECT `COLLATION_NAME` AS `Collation`, `CHARACTER_SET_NAME` AS `Charset`, `ID` AS `Id`, `IS_DEFAULT` AS `Default`, `IS_COMPILED` AS `Compiled`, `SORTLEN` AS `Sortlen` FROM `information_schema`.`COLLATIONS`
-2024-02-16T12:08:05.274307Z	   29 Query	SELECT COUNT(*) FROM `laravel`.`migrations`
-2024-02-16T12:08:05.275811Z	   29 Query	SELECT COUNT(*) FROM `laravel`.`password_reset_tokens`
-2024-02-16T12:08:05.278523Z	   29 Query	SELECT COUNT(*) FROM `laravel`.`personal_access_tokens`
-2024-02-16T12:08:05.282912Z	   29 Query	SELECT COUNT(*) FROM `laravel`.`sessions`
-2024-02-16T12:08:05.285400Z	   29 Query	SELECT COUNT(*) FROM `laravel`.`users`
-2024-02-16T12:08:05.287069Z	   29 Query	SELECT DEFAULT_COLLATION_NAME FROM information_schema.SCHEMATA WHERE SCHEMA_NAME = 'laravel' LIMIT 1
-2024-02-16T12:08:05.319499Z	   29 Query	SELECT @@default_storage_engine
-2024-02-16T12:08:05.322950Z	   29 Query	SELECT CURRENT_USER()
-2024-02-16T12:08:05.328574Z	   29 Query	SHOW TABLES FROM `laravel`
-2024-02-16T12:08:05.330366Z	   29 Query	SELECT 1 FROM mysql.user LIMIT 1
-2024-02-16T12:08:05.331057Z	   29 Query	SELECT 1 FROM (SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`COLUMN_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`TABLE_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`SCHEMA_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`USER_PRIVILEGES`) t WHERE `IS_GRANTABLE` = 'YES' AND '''root''@''%''' LIKE `GRANTEE` LIMIT 1
-2024-02-16T12:08:05.331949Z	   29 Query	SELECT `PRIVILEGE_TYPE` FROM `INFORMATION_SCHEMA`.`USER_PRIVILEGES` WHERE GRANTEE='''root''@''%''' AND PRIVILEGE_TYPE='EVENT'
-2024-02-16T12:08:05.332553Z	   29 Query	SELECT `PRIVILEGE_TYPE` FROM `INFORMATION_SCHEMA`.`USER_PRIVILEGES` WHERE GRANTEE='''root''@''%''' AND PRIVILEGE_TYPE='TRIGGER'
-2024-02-16T12:08:05.337702Z	   30 Quit	
-2024-02-16T12:08:05.337791Z	   29 Quit	
-2024-02-16T12:08:05.478957Z	   31 Connect	root@localhost on  using TCP/IP
-2024-02-16T12:08:05.479317Z	   31 Query	SELECT @@version, @@version_comment
-2024-02-16T12:08:05.482469Z	   31 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_general_ci'
-2024-02-16T12:08:05.482796Z	   31 Query	SET lc_messages = 'ru_RU'
-2024-02-16T12:08:05.488442Z	   32 Connect	root@localhost on  using TCP/IP
-2024-02-16T12:08:05.491844Z	   32 Query	SHOW TABLES FROM `phpmyadmin`
-2024-02-16T12:08:05.501086Z	   31 Query	SET collation_connection = 'utf8mb4_unicode_ci'
-2024-02-16T12:08:05.501541Z	   32 Query	SHOW TABLES FROM `phpmyadmin`
-2024-02-16T12:08:05.508366Z	   31 Query	SELECT CURRENT_USER()
-2024-02-16T12:08:05.511923Z	   31 Query	SELECT `SCHEMA_NAME` FROM `INFORMATION_SCHEMA`.`SCHEMATA`, (SELECT DB_first_level FROM ( SELECT DISTINCT SUBSTRING_INDEX(SCHEMA_NAME, '_', 1) DB_first_level FROM INFORMATION_SCHEMA.SCHEMATA WHERE TRUE ) t ORDER BY DB_first_level ASC LIMIT 0, 100) t2 WHERE TRUE AND 1 = LOCATE(CONCAT(DB_first_level, '_'), CONCAT(SCHEMA_NAME, '_')) ORDER BY SCHEMA_NAME ASC
-2024-02-16T12:08:05.515478Z	   31 Query	SELECT COUNT(*) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`='laravel' AND `TABLE_TYPE` IN('BASE TABLE', 'SYSTEM VERSIONED')
-2024-02-16T12:08:05.579383Z	   31 Query	SELECT COUNT(*) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`='laravel' AND `TABLE_TYPE` NOT IN('BASE TABLE', 'SYSTEM VERSIONED')
-2024-02-16T12:08:05.580944Z	   31 Query	SELECT @@lower_case_table_names
-2024-02-16T12:08:05.581401Z	   31 Query	SELECT COUNT(*) FROM `INFORMATION_SCHEMA`.`ROUTINES` WHERE `ROUTINE_SCHEMA` COLLATE utf8_general_ci='laravel' AND `ROUTINE_TYPE`='FUNCTION'
-2024-02-16T12:08:05.592536Z	   31 Query	SELECT COUNT(*) FROM `INFORMATION_SCHEMA`.`ROUTINES` WHERE `ROUTINE_SCHEMA` COLLATE utf8_general_ci='laravel'AND `ROUTINE_TYPE`='PROCEDURE'
-2024-02-16T12:08:05.594040Z	   31 Query	SELECT COUNT(*) FROM `INFORMATION_SCHEMA`.`EVENTS` WHERE `EVENT_SCHEMA` COLLATE utf8_general_ci='laravel'
-2024-02-16T12:08:05.596788Z	   31 Query	SELECT `TABLE_NAME` AS `name` FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`='laravel' AND `TABLE_TYPE` IN('BASE TABLE', 'SYSTEM VERSIONED') ORDER BY `TABLE_NAME` ASC LIMIT 0, 50
-2024-02-16T12:08:05.618841Z	   31 Query	SELECT COUNT(*) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`='laravel' AND `TABLE_TYPE` IN('BASE TABLE', 'SYSTEM VERSIONED')
-2024-02-16T12:08:05.624036Z	   31 Query	SELECT COUNT(*) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`='laravel' AND `TABLE_TYPE` IN('BASE TABLE', 'SYSTEM VERSIONED')
-2024-02-16T12:08:05.659275Z	   31 Query	SELECT 1 FROM mysql.user LIMIT 1
-2024-02-16T12:08:05.660550Z	   31 Query	SELECT 1 FROM (SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`COLUMN_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`TABLE_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`SCHEMA_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`USER_PRIVILEGES`) t WHERE `IS_GRANTABLE` = 'YES' AND '''root''@''%''' LIKE `GRANTEE` LIMIT 1
-2024-02-16T12:08:05.664246Z	   32 Quit	
-2024-02-16T12:08:05.664342Z	   31 Quit	
-2024-02-16T12:08:07.117945Z	   33 Connect	root@localhost on  using TCP/IP
-2024-02-16T12:08:07.118328Z	   33 Query	SELECT @@version, @@version_comment
-2024-02-16T12:08:07.121205Z	   33 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_general_ci'
-2024-02-16T12:08:07.121453Z	   33 Query	SET lc_messages = 'ru_RU'
-2024-02-16T12:08:07.148321Z	   34 Connect	root@localhost on  using TCP/IP
-2024-02-16T12:08:07.153279Z	   34 Query	SHOW TABLES FROM `phpmyadmin`
-2024-02-16T12:08:07.153940Z	   34 Query	SHOW TABLES FROM `laravel`
-2024-02-16T12:08:07.164552Z	   33 Query	SET collation_connection = 'utf8mb4_unicode_ci'
-2024-02-16T12:08:07.164957Z	   34 Query	SHOW TABLES FROM `phpmyadmin`
-2024-02-16T12:08:07.165497Z	   34 Query	SHOW TABLES FROM `laravel`
-2024-02-16T12:08:07.196747Z	   33 Query	SELECT CURRENT_USER()
-2024-02-16T12:08:07.236347Z	   33 Query	SELECT 1 FROM mysql.user LIMIT 1
-2024-02-16T12:08:07.238344Z	   33 Query	SHOW SESSION VARIABLES LIKE 'FOREIGN_KEY_CHECKS'
-2024-02-16T12:08:07.252489Z	   33 Query	SELECT DATABASE()
-2024-02-16T12:08:07.252835Z	   33 Init DB	laravel
-2024-02-16T12:08:07.253343Z	   33 Query	SELECT * FROM `users` LIMIT 0, 50
-2024-02-16T12:08:07.264833Z	   33 Query	SHOW WARNINGS
-2024-02-16T12:08:07.267032Z	   33 Query	SELECT @@lower_case_table_names
-2024-02-16T12:08:07.267638Z	   33 Query	SELECT TABLE_NAME FROM information_schema.VIEWS WHERE TABLE_SCHEMA = 'laravel' AND TABLE_NAME = 'users' AND IS_UPDATABLE = 'YES'
-2024-02-16T12:08:07.273221Z	   33 Query	SHOW  COLUMNS FROM `laravel`.`users`
-2024-02-16T12:08:07.277850Z	   33 Query	SHOW INDEXES FROM `laravel`.`users`
-2024-02-16T12:08:07.281678Z	   33 Query	SELECT TABLE_NAME FROM information_schema.VIEWS WHERE TABLE_SCHEMA = 'laravel' AND TABLE_NAME = 'users'
-2024-02-16T12:08:07.285892Z	   33 Query	SELECT @@have_profiling
-2024-02-16T12:08:07.286430Z	   33 Query	SHOW CREATE TABLE `laravel`.`users`
-2024-02-16T12:08:07.299515Z	   33 Query	SELECT TABLE_NAME FROM information_schema.VIEWS WHERE TABLE_SCHEMA = 'laravel' AND TABLE_NAME = 'users'
-2024-02-16T12:08:07.301180Z	   33 Query	SELECT TABLE_NAME FROM information_schema.VIEWS WHERE TABLE_SCHEMA = 'laravel' AND TABLE_NAME = 'users'
-2024-02-16T12:08:07.302458Z	   33 Query	SELECT TABLE_NAME FROM information_schema.VIEWS WHERE TABLE_SCHEMA = 'laravel' AND TABLE_NAME = 'users'
-2024-02-16T12:08:07.303745Z	   33 Query	SELECT *, `TABLE_SCHEMA`       AS `Db`, `TABLE_NAME`         AS `Name`, `TABLE_TYPE`         AS `TABLE_TYPE`, `ENGINE`             AS `Engine`, `ENGINE`             AS `Type`, `VERSION`            AS `Version`, `ROW_FORMAT`         AS `Row_format`, `TABLE_ROWS`         AS `Rows`, `AVG_ROW_LENGTH`     AS `Avg_row_length`, `DATA_LENGTH`        AS `Data_length`, `MAX_DATA_LENGTH`    AS `Max_data_length`, `INDEX_LENGTH`       AS `Index_length`, `DATA_FREE`          AS `Data_free`, `AUTO_INCREMENT`     AS `Auto_increment`, `CREATE_TIME`        AS `Create_time`, `UPDATE_TIME`        AS `Update_time`, `CHECK_TIME`         AS `Check_time`, `TABLE_COLLATION`    AS `Collation`, `CHECKSUM`           AS `Checksum`, `CREATE_OPTIONS`     AS `Create_options`, `TABLE_COMMENT`      AS `Comment` FROM `information_schema`.`TABLES` t WHERE `TABLE_SCHEMA` COLLATE utf8_general_ci IN ('laravel') AND t.`TABLE_NAME` COLLATE utf8_general_ci = 'users' ORDER BY Name ASC
-2024-02-16T12:08:07.306789Z	   33 Query	SHOW FULL COLUMNS FROM `laravel`.`users`
-2024-02-16T12:08:07.360302Z	   33 Query	SHOW SESSION VARIABLES LIKE 'FOREIGN_KEY_CHECKS'
-2024-02-16T12:08:07.364838Z	   33 Query	SHOW  COLUMNS FROM `laravel`.`users`
-2024-02-16T12:08:07.370294Z	   33 Query	SELECT 1 FROM (SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`COLUMN_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`TABLE_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`SCHEMA_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`USER_PRIVILEGES`) t WHERE `IS_GRANTABLE` = 'YES' AND '''root''@''%''' LIKE `GRANTEE` LIMIT 1
-2024-02-16T12:08:07.372499Z	   33 Query	SELECT `PRIVILEGE_TYPE` FROM `INFORMATION_SCHEMA`.`USER_PRIVILEGES` WHERE GRANTEE='''root''@''%''' AND PRIVILEGE_TYPE='TRIGGER'
-2024-02-16T12:08:07.378652Z	   34 Quit	
-2024-02-16T12:08:07.378980Z	   33 Quit	
-2024-02-16T12:08:07.583974Z	   35 Connect	root@localhost on  using TCP/IP
-2024-02-16T12:08:07.584264Z	   35 Query	SELECT @@version, @@version_comment
-2024-02-16T12:08:07.588165Z	   35 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_general_ci'
-2024-02-16T12:08:07.588383Z	   35 Query	SET lc_messages = 'ru_RU'
-2024-02-16T12:08:07.615754Z	   36 Connect	root@localhost on  using TCP/IP
-2024-02-16T12:08:07.620706Z	   36 Query	SHOW TABLES FROM `phpmyadmin`
-2024-02-16T12:08:07.630975Z	   35 Query	SET collation_connection = 'utf8mb4_unicode_ci'
-2024-02-16T12:08:07.631629Z	   36 Query	SHOW TABLES FROM `phpmyadmin`
-2024-02-16T12:08:07.662184Z	   35 Query	SELECT 1 FROM mysql.user LIMIT 1
-2024-02-16T12:08:07.662698Z	   35 Query	SELECT CURRENT_USER()
-2024-02-16T12:08:07.663792Z	   35 Query	SELECT 1 FROM (SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`COLUMN_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`TABLE_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`SCHEMA_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`USER_PRIVILEGES`) t WHERE `IS_GRANTABLE` = 'YES' AND '''root''@''%''' LIKE `GRANTEE` LIMIT 1
-2024-02-16T12:08:07.667991Z	   36 Quit	
-2024-02-16T12:08:07.668114Z	   35 Quit	
-2024-02-16T12:16:07.933108Z	   37 Connect	root@localhost on laravel using TCP/IP
-2024-02-16T12:16:07.933587Z	   37 Query	use `laravel`
-2024-02-16T12:16:07.933867Z	   37 Prepare	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:16:07.933926Z	   37 Execute	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:16:07.934071Z	   37 Close stmt	
-2024-02-16T12:16:07.934171Z	   37 Prepare	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:16:07.934233Z	   37 Execute	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:16:07.934371Z	   37 Close stmt	
-2024-02-16T12:16:07.934772Z	   37 Prepare	select * from `sessions` where `id` = ? limit 1
-2024-02-16T12:16:07.935584Z	   37 Execute	select * from `sessions` where `id` = '0tfq2nSq5V2a3o22R4pwBlyyWdUe6B90LCbbbcAC' limit 1
-2024-02-16T12:16:07.936231Z	   37 Close stmt	
-2024-02-16T12:16:07.963885Z	   37 Prepare	select * from `users` where `id` = ? limit 1
-2024-02-16T12:16:07.964228Z	   37 Prepare	select * from `users` where `id` = ? limit 1
-2024-02-16T12:16:07.964274Z	   37 Execute	select * from `users` where `id` = 2 limit 1
-2024-02-16T12:16:07.964795Z	   37 Close stmt	
-2024-02-16T12:16:08.005402Z	   37 Prepare	update `sessions` set `payload` = ?, `last_activity` = ?, `user_id` = ?, `ip_address` = ?, `user_agent` = ? where `id` = ?
-2024-02-16T12:16:08.005548Z	   37 Prepare	update `sessions` set `payload` = ?, `last_activity` = ?, `user_id` = ?, `ip_address` = ?, `user_agent` = ? where `id` = ?
-2024-02-16T12:16:08.005573Z	   37 Execute	update `sessions` set `payload` = 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiV3Ntbk0zMWc2ZHVrYkJ4VUhzekZSWHNsMnVORXN0ZDJUTXdCemxjbiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjQ6Imh0dHA6Ly9sYXJhdmVsL2Rhc2hib2FyZCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjI7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTIkSW16OWJKZjZ3by51OW9tUkkxS2dmT3BNaXBSWU9tTTlBdlJiRVBOdlgvWk1wRHhtOWdkMW0iO30=', `last_activity` = 1708085768, `user_id` = 2, `ip_address` = '127.0.0.1', `user_agent` = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36' where `id` = '0tfq2nSq5V2a3o22R4pwBlyyWdUe6B90LCbbbcAC'
-2024-02-16T12:16:08.006357Z	   37 Close stmt	
-2024-02-16T12:16:08.009415Z	   37 Quit	
-2024-02-16T12:17:02.833703Z	   38 Connect	root@localhost on laravel using TCP/IP
-2024-02-16T12:17:02.834021Z	   38 Query	use `laravel`
-2024-02-16T12:17:02.834372Z	   38 Prepare	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:17:02.834492Z	   38 Execute	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:17:02.834735Z	   38 Close stmt	
-2024-02-16T12:17:02.834890Z	   38 Prepare	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:17:02.834997Z	   38 Execute	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:17:02.835264Z	   38 Close stmt	
-2024-02-16T12:17:02.835696Z	   38 Prepare	select * from `sessions` where `id` = ? limit 1
-2024-02-16T12:17:02.836281Z	   38 Execute	select * from `sessions` where `id` = '0tfq2nSq5V2a3o22R4pwBlyyWdUe6B90LCbbbcAC' limit 1
-2024-02-16T12:17:02.836628Z	   38 Close stmt	
-2024-02-16T12:17:02.858887Z	   38 Prepare	select * from `users` where `id` = ? limit 1
-2024-02-16T12:17:02.859188Z	   38 Prepare	select * from `users` where `id` = ? limit 1
-2024-02-16T12:17:02.859233Z	   38 Execute	select * from `users` where `id` = 2 limit 1
-2024-02-16T12:17:02.859638Z	   38 Close stmt	
-2024-02-16T12:17:02.864587Z	   38 Prepare	delete from `sessions` where `id` = ?
-2024-02-16T12:17:02.864690Z	   38 Execute	delete from `sessions` where `id` = '0tfq2nSq5V2a3o22R4pwBlyyWdUe6B90LCbbbcAC'
-2024-02-16T12:17:02.883462Z	   38 Close stmt	
-2024-02-16T12:17:02.889409Z	   38 Prepare	select * from `sessions` where `id` = ? limit 1
-2024-02-16T12:17:02.889486Z	   38 Execute	select * from `sessions` where `id` = 'cEZoQIJ4QJqsXqJfieZav7RUjnMiFLAo8oLCXcqG' limit 1
-2024-02-16T12:17:02.889834Z	   38 Close stmt	
-2024-02-16T12:17:02.890226Z	   38 Prepare	insert into `sessions` (`payload`, `last_activity`, `user_id`, `ip_address`, `user_agent`, `id`) values (?, ?, ?, ?, ?, ?)
-2024-02-16T12:17:02.890353Z	   38 Execute	insert into `sessions` (`payload`, `last_activity`, `user_id`, `ip_address`, `user_agent`, `id`) values ('YToyOntzOjY6Il90b2tlbiI7czo0MDoiVTlYYUNBclNUUkRJcllOQUo2MkI4ZUkxNFJOb3U1NDNjQWZzQmN6TCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1708085822, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36', 'cEZoQIJ4QJqsXqJfieZav7RUjnMiFLAo8oLCXcqG')
-2024-02-16T12:17:02.890823Z	   38 Close stmt	
-2024-02-16T12:17:02.893696Z	   38 Quit	
-2024-02-16T12:17:03.134559Z	   39 Connect	root@localhost on laravel using TCP/IP
-2024-02-16T12:17:03.134990Z	   39 Query	use `laravel`
-2024-02-16T12:17:03.135385Z	   39 Prepare	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:17:03.135471Z	   39 Execute	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:17:03.135696Z	   39 Close stmt	
-2024-02-16T12:17:03.135839Z	   39 Prepare	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:17:03.135915Z	   39 Execute	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:17:03.136131Z	   39 Close stmt	
-2024-02-16T12:17:03.136453Z	   39 Prepare	select * from `sessions` where `id` = ? limit 1
-2024-02-16T12:17:03.136826Z	   39 Execute	select * from `sessions` where `id` = 'cEZoQIJ4QJqsXqJfieZav7RUjnMiFLAo8oLCXcqG' limit 1
-2024-02-16T12:17:03.137166Z	   39 Close stmt	
-2024-02-16T12:17:03.153652Z	   39 Prepare	update `sessions` set `payload` = ?, `last_activity` = ?, `user_id` = ?, `ip_address` = ?, `user_agent` = ? where `id` = ?
-2024-02-16T12:17:03.153801Z	   39 Execute	update `sessions` set `payload` = 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiVTlYYUNBclNUUkRJcllOQUo2MkI4ZUkxNFJOb3U1NDNjQWZzQmN6TCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTQ6Imh0dHA6Ly9sYXJhdmVsIjt9fQ==', `last_activity` = 1708085823, `user_id` = NULL, `ip_address` = '127.0.0.1', `user_agent` = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36' where `id` = 'cEZoQIJ4QJqsXqJfieZav7RUjnMiFLAo8oLCXcqG'
-2024-02-16T12:17:03.154304Z	   39 Close stmt	
-2024-02-16T12:17:03.157341Z	   39 Quit	
-2024-02-16T12:18:32.143007Z	   40 Connect	root@localhost on laravel using TCP/IP
-2024-02-16T12:18:32.143459Z	   40 Query	use `laravel`
-2024-02-16T12:18:32.143818Z	   40 Prepare	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:18:32.143872Z	   40 Execute	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:18:32.144017Z	   40 Close stmt	
-2024-02-16T12:18:32.144173Z	   40 Prepare	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:18:32.144242Z	   40 Execute	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:18:32.144388Z	   40 Close stmt	
-2024-02-16T12:18:32.144682Z	   40 Prepare	select * from `sessions` where `id` = ? limit 1
-2024-02-16T12:18:32.145069Z	   40 Execute	select * from `sessions` where `id` = 'cEZoQIJ4QJqsXqJfieZav7RUjnMiFLAo8oLCXcqG' limit 1
-2024-02-16T12:18:32.145347Z	   40 Close stmt	
-2024-02-16T12:18:32.173932Z	   40 Prepare	update `sessions` set `payload` = ?, `last_activity` = ?, `user_id` = ?, `ip_address` = ?, `user_agent` = ? where `id` = ?
-2024-02-16T12:18:32.174119Z	   40 Execute	update `sessions` set `payload` = 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiVTlYYUNBclNUUkRJcllOQUo2MkI4ZUkxNFJOb3U1NDNjQWZzQmN6TCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjM6Imh0dHA6Ly9sYXJhdmVsL3JlZ2lzdGVyIjt9fQ==', `last_activity` = 1708085912, `user_id` = NULL, `ip_address` = '127.0.0.1', `user_agent` = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36' where `id` = 'cEZoQIJ4QJqsXqJfieZav7RUjnMiFLAo8oLCXcqG'
-2024-02-16T12:18:32.193084Z	   40 Close stmt	
-2024-02-16T12:18:32.194709Z	   40 Quit	
-2024-02-16T12:18:42.500252Z	   41 Connect	root@localhost on laravel using TCP/IP
-2024-02-16T12:18:42.500717Z	   41 Query	use `laravel`
-2024-02-16T12:18:42.501093Z	   41 Prepare	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:18:42.501157Z	   41 Execute	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
-2024-02-16T12:18:42.501348Z	   41 Close stmt	
-2024-02-16T12:18:42.501532Z	   41 Prepare	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:18:42.501610Z	   41 Execute	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
-2024-02-16T12:18:42.501778Z	   41 Close stmt	
-2024-02-16T12:18:42.501973Z	   41 Prepare	select * from `sessions` where `id` = ? limit 1
-2024-02-16T12:18:42.502645Z	   41 Execute	select * from `sessions` where `id` = 'cEZoQIJ4QJqsXqJfieZav7RUjnMiFLAo8oLCXcqG' limit 1
-2024-02-16T12:18:42.503087Z	   41 Close stmt	
-2024-02-16T12:18:42.533199Z	   41 Prepare	update `sessions` set `payload` = ?, `last_activity` = ?, `user_id` = ?, `ip_address` = ?, `user_agent` = ? where `id` = ?
-2024-02-16T12:18:42.533376Z	   41 Execute	update `sessions` set `payload` = 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiVTlYYUNBclNUUkRJcllOQUo2MkI4ZUkxNFJOb3U1NDNjQWZzQmN6TCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjA6Imh0dHA6Ly9sYXJhdmVsL2xvZ2luIjt9fQ==', `last_activity` = 1708085922, `user_id` = NULL, `ip_address` = '127.0.0.1', `user_agent` = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36' where `id` = 'cEZoQIJ4QJqsXqJfieZav7RUjnMiFLAo8oLCXcqG'
-2024-02-16T12:18:42.534774Z	   41 Close stmt	
-2024-02-16T12:18:42.537692Z	   41 Quit	
+2024-02-16T15:15:43.276947Z	    8 Connect	root@localhost on laravel using TCP/IP
+2024-02-16T15:15:43.277754Z	    8 Query	use `laravel`
+2024-02-16T15:15:43.278086Z	    8 Prepare	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
+2024-02-16T15:15:43.278148Z	    8 Execute	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
+2024-02-16T15:15:43.278275Z	    8 Close stmt	
+2024-02-16T15:15:43.278391Z	    8 Prepare	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
+2024-02-16T15:15:43.278458Z	    8 Execute	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
+2024-02-16T15:15:43.278651Z	    8 Close stmt	
+2024-02-16T15:15:43.282288Z	    8 Prepare	select * from `sessions` where `id` = ? limit 1
+2024-02-16T15:15:43.282730Z	    8 Execute	select * from `sessions` where `id` = 'GxJFbz8lrVJFgrM6QWp2Tc6AnirA76GJdFHb50Eu' limit 1
+2024-02-16T15:15:43.284096Z	    8 Close stmt	
+2024-02-16T15:15:43.315567Z	    8 Prepare	select * from `users` where `id` = ? limit 1
+2024-02-16T15:15:43.315870Z	    8 Prepare	select * from `users` where `id` = ? limit 1
+2024-02-16T15:15:43.315907Z	    8 Execute	select * from `users` where `id` = 2 limit 1
+2024-02-16T15:15:43.317292Z	    8 Close stmt	
+2024-02-16T15:15:43.326078Z	    8 Prepare	update `sessions` set `payload` = ?, `last_activity` = ?, `user_id` = ?, `ip_address` = ?, `user_agent` = ? where `id` = ?
+2024-02-16T15:15:43.326217Z	    8 Prepare	update `sessions` set `payload` = ?, `last_activity` = ?, `user_id` = ?, `ip_address` = ?, `user_agent` = ? where `id` = ?
+2024-02-16T15:15:43.326235Z	    8 Execute	update `sessions` set `payload` = 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiUzE1MGtkdUFvR3hzaVFBc2JzN3JnRUpUMzY2SXRnVVZaUFltbEMyeCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTQ6Imh0dHA6Ly9sYXJhdmVsIjt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MjtzOjIxOiJwYXNzd29yZF9oYXNoX3NhbmN0dW0iO3M6NjA6IiQyeSQxMiRJbXo5YkpmNndvLnU5b21SSTFLZ2ZPcE1pcFJZT21NOUF2UmJFUE52WC9aTXBEeG05Z2QxbSI7fQ==', `last_activity` = 1708096543, `user_id` = 2, `ip_address` = '127.0.0.1', `user_agent` = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36' where `id` = 'GxJFbz8lrVJFgrM6QWp2Tc6AnirA76GJdFHb50Eu'
+2024-02-16T15:15:43.327087Z	    8 Close stmt	
+2024-02-16T15:15:43.328251Z	    8 Quit	
+2024-02-16T15:15:52.817936Z	    9 Connect	root@localhost on laravel using TCP/IP
+2024-02-16T15:15:52.818277Z	    9 Query	use `laravel`
+2024-02-16T15:15:52.818576Z	    9 Prepare	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
+2024-02-16T15:15:52.818641Z	    9 Execute	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
+2024-02-16T15:15:52.818814Z	    9 Close stmt	
+2024-02-16T15:15:52.818915Z	    9 Prepare	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
+2024-02-16T15:15:52.818987Z	    9 Execute	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
+2024-02-16T15:15:52.819138Z	    9 Close stmt	
+2024-02-16T15:15:52.819340Z	    9 Prepare	select * from `sessions` where `id` = ? limit 1
+2024-02-16T15:15:52.819611Z	    9 Execute	select * from `sessions` where `id` = 'GxJFbz8lrVJFgrM6QWp2Tc6AnirA76GJdFHb50Eu' limit 1
+2024-02-16T15:15:52.819824Z	    9 Close stmt	
+2024-02-16T15:15:52.844473Z	    9 Prepare	select * from `users` where `id` = ? limit 1
+2024-02-16T15:15:52.844641Z	    9 Prepare	select * from `users` where `id` = ? limit 1
+2024-02-16T15:15:52.844667Z	    9 Execute	select * from `users` where `id` = 2 limit 1
+2024-02-16T15:15:52.844963Z	    9 Close stmt	
+2024-02-16T15:15:52.852244Z	    9 Prepare	update `sessions` set `payload` = ?, `last_activity` = ?, `user_id` = ?, `ip_address` = ?, `user_agent` = ? where `id` = ?
+2024-02-16T15:15:52.852364Z	    9 Prepare	update `sessions` set `payload` = ?, `last_activity` = ?, `user_id` = ?, `ip_address` = ?, `user_agent` = ? where `id` = ?
+2024-02-16T15:15:52.852382Z	    9 Execute	update `sessions` set `payload` = 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiUzE1MGtkdUFvR3hzaVFBc2JzN3JnRUpUMzY2SXRnVVZaUFltbEMyeCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTQ6Imh0dHA6Ly9sYXJhdmVsIjt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MjtzOjIxOiJwYXNzd29yZF9oYXNoX3NhbmN0dW0iO3M6NjA6IiQyeSQxMiRJbXo5YkpmNndvLnU5b21SSTFLZ2ZPcE1pcFJZT21NOUF2UmJFUE52WC9aTXBEeG05Z2QxbSI7fQ==', `last_activity` = 1708096552, `user_id` = 2, `ip_address` = '127.0.0.1', `user_agent` = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36' where `id` = 'GxJFbz8lrVJFgrM6QWp2Tc6AnirA76GJdFHb50Eu'
+2024-02-16T15:15:52.853315Z	    9 Close stmt	
+2024-02-16T15:15:52.854759Z	    9 Quit	

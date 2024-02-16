@@ -13,7 +13,22 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('Главная') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('loading') }}" :active="request()->routeIs('loading')">
+                    {{ __('Загрузить') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('orders') }}" :active="request()->routeIs('orders')">
+                    {{ __('Ваши заказы') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('cargo') }}" :active="request()->routeIs('cargo')">
+                    {{ __('Ваши грузы') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('truck') }}" :active="request()->routeIs('truck')">
+                    {{ __('Ваши машины') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('auction') }}" :active="request()->routeIs('auction')">
+                    {{ __('Торги') }}
                     </x-nav-link>
                 </div>
             </div>

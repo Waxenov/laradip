@@ -1,13 +1,13 @@
-[Fri Feb 16 18:01:54.462078 2024] [ssl:warn] [pid 1776:tid 380] AH01909: laravel:443:0 server certificate does NOT include an ID which matches the server name
-[Fri Feb 16 18:01:54.471460 2024] [ssl:warn] [pid 1776:tid 380] AH01909: default:443:0 server certificate does NOT include an ID which matches the server name
-[Fri Feb 16 18:01:54.532664 2024] [ssl:warn] [pid 1776:tid 380] AH01909: laravel:443:0 server certificate does NOT include an ID which matches the server name
-[Fri Feb 16 18:01:54.539072 2024] [ssl:warn] [pid 1776:tid 380] AH01909: default:443:0 server certificate does NOT include an ID which matches the server name
-[Fri Feb 16 18:01:54.615914 2024] [mpm_winnt:notice] [pid 1776:tid 380] AH00455: Apache/2.4.54 (Win64) OpenSSL/3.0.5 configured -- resuming normal operations
-[Fri Feb 16 18:01:54.615914 2024] [mpm_winnt:notice] [pid 1776:tid 380] AH00456: Server built: Jul 26 2022 23:58:26
-[Fri Feb 16 18:01:54.615914 2024] [core:notice] [pid 1776:tid 380] AH00094: Command line: 'C:\\Users\\waxxe\\repos\\laradip\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1\\bin\\httpd.exe -d C:/Users/waxxe/repos/laradip/OSPanel/modules/http/Apache_2.4-PHP_8.0-8.1 -f c:\\users\\waxxe\\repos\\laradip\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1\\conf\\httpd.conf'
-[Fri Feb 16 18:01:54.621895 2024] [mpm_winnt:notice] [pid 1776:tid 380] AH00418: Parent: Created child process 14108
-[Fri Feb 16 18:01:55.037925 2024] [ssl:warn] [pid 14108:tid 352] AH01909: laravel:443:0 server certificate does NOT include an ID which matches the server name
-[Fri Feb 16 18:01:55.043927 2024] [ssl:warn] [pid 14108:tid 352] AH01909: default:443:0 server certificate does NOT include an ID which matches the server name
-[Fri Feb 16 18:01:55.081765 2024] [ssl:warn] [pid 14108:tid 352] AH01909: laravel:443:0 server certificate does NOT include an ID which matches the server name
-[Fri Feb 16 18:01:55.089767 2024] [ssl:warn] [pid 14108:tid 352] AH01909: default:443:0 server certificate does NOT include an ID which matches the server name
-[Fri Feb 16 18:01:55.156352 2024] [mpm_winnt:notice] [pid 14108:tid 352] AH00354: Child: Starting 128 worker threads.
+[Fri Feb 16 21:14:30.225275 2024] [ssl:warn] [pid 19660:tid 364] AH01909: laravel:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Feb 16 21:14:30.229333 2024] [ssl:warn] [pid 19660:tid 364] AH01909: default:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Feb 16 21:14:30.264270 2024] [ssl:warn] [pid 19660:tid 364] AH01909: laravel:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Feb 16 21:14:30.268277 2024] [ssl:warn] [pid 19660:tid 364] AH01909: default:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Feb 16 21:14:31.169930 2024] [mpm_winnt:notice] [pid 19660:tid 364] AH00455: Apache/2.4.54 (Win64) OpenSSL/3.0.5 configured -- resuming normal operations
+[Fri Feb 16 21:14:31.169930 2024] [mpm_winnt:notice] [pid 19660:tid 364] AH00456: Server built: Jul 26 2022 23:58:26
+[Fri Feb 16 21:14:31.169930 2024] [core:notice] [pid 19660:tid 364] AH00094: Command line: 'C:\\Users\\waxxe\\repos\\laradip\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1\\bin\\httpd.exe -d C:/Users/waxxe/repos/laradip/OSPanel/modules/http/Apache_2.4-PHP_8.0-8.1 -f c:\\users\\waxxe\\repos\\laradip\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1\\conf\\httpd.conf'
+[Fri Feb 16 21:14:31.174574 2024] [mpm_winnt:notice] [pid 19660:tid 364] AH00418: Parent: Created child process 22832
+[Fri Feb 16 21:14:31.440723 2024] [ssl:warn] [pid 22832:tid 392] AH01909: laravel:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Feb 16 21:14:31.443837 2024] [ssl:warn] [pid 22832:tid 392] AH01909: default:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Feb 16 21:14:31.473495 2024] [ssl:warn] [pid 22832:tid 392] AH01909: laravel:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Feb 16 21:14:31.477495 2024] [ssl:warn] [pid 22832:tid 392] AH01909: default:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Feb 16 21:14:31.523298 2024] [mpm_winnt:notice] [pid 22832:tid 392] AH00354: Child: Starting 128 worker threads.

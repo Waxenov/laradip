@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
 Route::get('/counter', Counter::class);
 Route::middleware([
@@ -25,4 +25,24 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::get('/loading', function () {
+        return view('loading');
+    })->name('loading');
+
+    Route::get('/orders', function () {
+        return view('orders');
+    })->name('orders');
+
+    Route::get('/cargo', function () {
+        return view('cargo');
+    })->name('cargo');
+
+    Route::get('/truck', function () {
+        return view('truck');
+    })->name('truck');
+
+    Route::get('/auction', function () {
+        return view('auction');
+    })->name('auction');
 });
