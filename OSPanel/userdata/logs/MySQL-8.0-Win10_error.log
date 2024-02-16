@@ -6,3 +6,5 @@
 2024-02-16T12:01:54.856013Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
 2024-02-16T12:01:54.930102Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '127.0.0.1' port: 33060
 2024-02-16T12:01:54.930197Z 0 [System] [MY-010931] [Server] c:\users\waxxe\repos\laradip\ospanel\modules\database\MySQL-8.0-Win10\bin\mysqld.exe: ready for connections. Version: '8.0.30'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2024-02-16T12:40:00.321105Z 0 [System] [MY-013105] [Server] c:\users\waxxe\repos\laradip\ospanel\modules\database\MySQL-8.0-Win10\bin\mysqld.exe: Normal shutdown.
+2024-02-16T12:40:01.193433Z 0 [System] [MY-010910] [Server] c:\users\waxxe\repos\laradip\ospanel\modules\database\MySQL-8.0-Win10\bin\mysqld.exe: Shutdown complete (mysqld 8.0.30)  MySQL Community Server - GPL.
