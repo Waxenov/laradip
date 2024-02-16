@@ -1,8 +1,10 @@
-2024-02-16T15:14:29.349862Z 0 [System] [MY-010116] [Server] c:\users\waxxe\repos\laradip\ospanel\modules\database\MySQL-8.0-Win10\bin\mysqld.exe (mysqld 8.0.30) starting as process 19164
-2024-02-16T15:14:29.380649Z 0 [Warning] [MY-013907] [InnoDB] Deprecated configuration parameters innodb_log_file_size and/or innodb_log_files_in_group have been used to compute innodb_redo_log_capacity=67108864. Please use innodb_redo_log_capacity instead.
-2024-02-16T15:14:29.383426Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
-2024-02-16T15:14:29.724984Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
-2024-02-16T15:14:30.051641Z 0 [Warning] [MY-010068] [Server] CA certificate c:/users/waxxe/repos/laradip/ospanel/userdata/MySQL-8.0-Win10/ca.pem is self signed.
-2024-02-16T15:14:30.051702Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
-2024-02-16T15:14:30.131564Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '127.0.0.1' port: 33060
-2024-02-16T15:14:30.131671Z 0 [System] [MY-010931] [Server] c:\users\waxxe\repos\laradip\ospanel\modules\database\MySQL-8.0-Win10\bin\mysqld.exe: ready for connections. Version: '8.0.30'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2024-02-16T16:07:47.915104Z 0 [System] [MY-010116] [Server] c:\users\waxxe\repos\laradip\ospanel\modules\database\MySQL-8.0-Win10\bin\mysqld.exe (mysqld 8.0.30) starting as process 18412
+2024-02-16T16:07:47.923854Z 0 [Warning] [MY-013907] [InnoDB] Deprecated configuration parameters innodb_log_file_size and/or innodb_log_files_in_group have been used to compute innodb_redo_log_capacity=67108864. Please use innodb_redo_log_capacity instead.
+2024-02-16T16:07:47.927483Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-02-16T16:07:48.299653Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-02-16T16:07:48.613297Z 0 [Warning] [MY-010068] [Server] CA certificate c:/users/waxxe/repos/laradip/ospanel/userdata/MySQL-8.0-Win10/ca.pem is self signed.
+2024-02-16T16:07:48.613349Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2024-02-16T16:07:48.670706Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '127.0.0.1' port: 33060
+2024-02-16T16:07:48.670994Z 0 [System] [MY-010931] [Server] c:\users\waxxe\repos\laradip\ospanel\modules\database\MySQL-8.0-Win10\bin\mysqld.exe: ready for connections. Version: '8.0.30'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2024-02-16T16:48:18.165386Z 0 [System] [MY-013105] [Server] c:\users\waxxe\repos\laradip\ospanel\modules\database\MySQL-8.0-Win10\bin\mysqld.exe: Normal shutdown.
+2024-02-16T16:48:18.506799Z 0 [System] [MY-010910] [Server] c:\users\waxxe\repos\laradip\ospanel\modules\database\MySQL-8.0-Win10\bin\mysqld.exe: Shutdown complete (mysqld 8.0.30)  MySQL Community Server - GPL.
