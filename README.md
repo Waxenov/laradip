@@ -1,2 +1,2 @@
 # laradip
-diploma in the laravel framework with ...
+diploma in the laravel framework
