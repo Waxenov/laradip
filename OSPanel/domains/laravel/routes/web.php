@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+//Route::redirect('/', 'register');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -25,7 +28,9 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-
+    Route::get('/welcome', function () {
+        return view('welcome');
+    })->name('welcome');
     Route::get('/loading', function () {
         return view('loading');
     })->name('loading');
