@@ -51,3 +51,8 @@ Route::middleware([
         return view('auction');
     })->name('auction');
 });
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
