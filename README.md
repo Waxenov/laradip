@@ -1,2 +1,2 @@
 # laradip
-diploma in the laravel framework
+the base of the site is based on laravel, jetstream, livewire and with the admin panel voyager
